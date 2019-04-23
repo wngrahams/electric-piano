@@ -1,4 +1,3 @@
-
 -- VHDL Test Bench Created from source file piano.vhd -- 01:25:43 12/17/2004
 --
 -- Notes: 
@@ -35,7 +34,7 @@ ARCHITECTURE behavior OF piano_tb IS
 	SIGNAL SPK_N :  std_logic;
 	SIGNAL SPK_P :  std_logic;
 	SIGNAL led_out :  std_logic_vector(7 downto 0);
-    SIGNAL switch_in: std_logic_vector(7 downto 0);
+    	SIGNAL switch_in: std_logic_vector(7 downto 0);
 	SIGNAL digit_out :  std_logic_vector(3 downto 0);
 	SIGNAL seg_out :  std_logic_vector(7 downto 0);
 
@@ -44,7 +43,7 @@ BEGIN
 	uut: piano PORT MAP(
 		CLK_IN => CLK_IN,
 		pb_in => pb_in,
-                switch_in => switch_in,
+        	switch_in => switch_in,
 		SPK_N => SPK_N,
 		SPK_P => SPK_P,
 		led_out => led_out,
@@ -54,23 +53,106 @@ BEGIN
 
 clk_gen: PROCESS 
 BEGIN
+-- 100MHz system Clock Generation
 	CLK_IN <= '0';
 	wait for 5 ns;
 	CLK_IN <= '1';
-	wait for 5 ns;
+	wait for 5 ns;               
 END PROCESS;
 
 -- *** Test Bench - User Defined Section ***
-   tb : PROCESS
-   BEGIN
-		-- System Reset
-		pb_in(0) <= '1';
-		wait for 50 ns;
-		pb_in(0) <= '0';
-		
-		wait for 1 sec;
-		
-   END PROCESS;
--- *** End Test Bench - User Defined Section ***
+tb : PROCESS
+BEGIN
+    -- System Reset
+    pb_in(0) <= '1';
+    wait for 1 ns;
+    pb_in(0) <= '0';
+    -- end system reset addition
+	
+    pb_in(3) <= '0';
+    pb_in(2) <= '0';
+    pb_in(1) <= '0';
+    pb_in(0) <= '0';
+    
+    switch_in(7) <= '0';
+    switch_in(6) <= '0';
+    switch_in(5) <= '0';
+    switch_in(4) <= '0';
+    switch_in(3) <= '0';
+    switch_in(2) <= '0';
+    switch_in(1) <= '0';
+    switch_in(0) <= '0';
+            
+    wait for 20 ns;
+    
+    -- test note C3
+    switch_in(7) <= '1';
+    switch_in(6) <= '0';
+    switch_in(5) <= '0';
+    switch_in(4) <= '0';
+    switch_in(3) <= '0';
+    switch_in(2) <= '0';
+    switch_in(1) <= '0';
+    switch_in(0) <= '0';
+        
+    wait for 395 us;
+    
+    
+    -- test note D3
+    switch_in(7) <= '0';
+    switch_in(6) <= '1';
+    switch_in(5) <= '0';
+    switch_in(4) <= '0';
+    switch_in(3) <= '0';
+    switch_in(2) <= '0';
+    switch_in(1) <= '0';
+    switch_in(0) <= '0';
+    
+    wait for 395 us;
+    
 
+--    -- test flat and sharp:
+--    -- pb_in(1) and pb_in(2) make the note flat and sharp respectively
+
+--    -- test D3 sharp:
+    switch_in(7) <= '0';
+    switch_in(6) <= '1';
+    switch_in(5) <= '0';
+    switch_in(4) <= '0';
+    switch_in(3) <= '0';
+    switch_in(2) <= '0';
+    switch_in(1) <= '0';
+    switch_in(0) <= '0';
+    pb_in(2) <= '1';
+
+    wait for 395 us;
+
+    -- test D3 flat:
+    pb_in(2) <= '0';
+    pb_in(1) <= '1';
+
+    wait for 370 us;
+    pb_in(1) <= '0';
+
+    -- test octaves:
+    -- test D4:
+    pb_in(3) <= '1';
+    wait for 395 us;
+    pb_in(3) <= '0';
+    
+    -- test note E3
+    switch_in(7) <= '0';
+    switch_in(6) <= '0';
+    switch_in(5) <= '1';
+    switch_in(4) <= '0';
+    switch_in(3) <= '0';
+    switch_in(2) <= '0';
+    switch_in(1) <= '0';
+    switch_in(0) <= '0';
+
+	
+    wait; -- will wait forever
+
+END PROCESS;  
+-- *** End Test Bench - User Defined Section ***
 END;
