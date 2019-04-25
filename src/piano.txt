@@ -267,9 +267,15 @@ begin
                 large_count <= large_count + 1;
                 small_count <= x"0000";
             end if;
-            
+
+		-- 029a --> 0190
+		-- 00c8 --> 00c8
+		-- 03e8 --> 0258
+		-- 0a6a --> 0640
+		-- 07d0 --> 04b0
+			            
 	    -- MEASURE 1
-            if (large_count = x"029a" and note_count = x"0000") then 
+            if (large_count = x"0190" and note_count = x"0000") then 
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -279,7 +285,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;                   
-            elsif (large_count = x"014d" and note_count = x"0002") then 
+            elsif (large_count = x"00c8" and note_count = x"0002") then 
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -289,7 +295,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"029a" and note_count = x"0004") then 
+            elsif (large_count = x"0190" and note_count = x"0004") then 
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -299,7 +305,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;                   
-            elsif (large_count = x"014d" and note_count = x"0006") then 
+            elsif (large_count = x"00c8" and note_count = x"0006") then 
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -311,7 +317,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"029a" and note_count = x"0008") then
+            elsif (large_count = x"0190" and note_count = x"0008") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -321,7 +327,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"014d" and note_count = x"000a") then
+            elsif (large_count = x"00c8" and note_count = x"000a") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -331,7 +337,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;       
-            elsif (large_count = x"029a" and note_count = x"000c") then
+            elsif (large_count = x"0190" and note_count = x"000c") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -341,7 +347,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;       
-            elsif (large_count = x"014d" and note_count = x"000e") then
+            elsif (large_count = x"00c8" and note_count = x"000e") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -353,7 +359,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"029a" and note_count = x"0010") then
+            elsif (large_count = x"0190" and note_count = x"0010") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -363,7 +369,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"014d" and note_count = x"0012") then
+            elsif (large_count = x"00c8" and note_count = x"0012") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -373,7 +379,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;       
-            elsif (large_count = x"029a" and note_count = x"0014") then
+            elsif (large_count = x"0190" and note_count = x"0014") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -383,7 +389,7 @@ begin
                large_count <= x"0000";
                small_count <= x"0000";
                note_count <= note_count + 1;       
-            elsif (large_count = x"014d" and note_count = x"0016") then
+            elsif (large_count = x"00c8" and note_count = x"0016") then
                note_next <= "00000"; -- off
                large_count <= x"0000";
                small_count <= x"0000";
@@ -395,7 +401,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"029a" and note_count = x"0018") then
+            elsif (large_count = x"0190" and note_count = x"0018") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -405,7 +411,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"014d" and note_count = x"001a") then
+            elsif (large_count = x"00c8" and note_count = x"001a") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -415,7 +421,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;       
-            elsif (large_count = x"029a" and note_count = x"001c") then
+            elsif (large_count = x"0190" and note_count = x"001c") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -425,7 +431,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;       
-            elsif (large_count = x"014d" and note_count = x"001e") then
+            elsif (large_count = x"00c8" and note_count = x"001e") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -437,7 +443,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"03e8" and note_count = x"0020") then
+	    elsif (large_count = x"0258" and note_count = x"0020") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -447,7 +453,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"03e8" and note_count = x"0022") then
+	    elsif (large_count = x"0258" and note_count = x"0022") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -459,7 +465,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"0a6a" and note_count = x"0024") then
+	    elsif (large_count = x"0640" and note_count = x"0024") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -471,7 +477,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"014d" and note_count = x"0026") then
+	    elsif (large_count = x"00c8" and note_count = x"0026") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -481,7 +487,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"029a" and note_count = x"0028") then
+	    elsif (large_count = x"0190" and note_count = x"0028") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -491,7 +497,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"014d" and note_count = x"002a") then
+	    elsif (large_count = x"00c8" and note_count = x"002a") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -503,7 +509,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"029a" and note_count = x"002c") then
+	    elsif (large_count = x"0190" and note_count = x"002c") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -513,7 +519,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"014d" and note_count = x"002e") then
+	    elsif (large_count = x"00c8" and note_count = x"002e") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -523,7 +529,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"03e8" and note_count = x"0030") then
+	    elsif (large_count = x"0258" and note_count = x"0030") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -535,7 +541,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"03e8" and note_count = x"0032") then
+	    elsif (large_count = x"0258" and note_count = x"0032") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -545,7 +551,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"03e8" and note_count = x"0034") then
+	    elsif (large_count = x"0258" and note_count = x"0034") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -557,7 +563,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"0a6a" and note_count = x"0036") then
+	    elsif (large_count = x"0640" and note_count = x"0036") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -569,7 +575,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"014d" and note_count = x"0038") then
+	    elsif (large_count = x"00c8" and note_count = x"0038") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -579,7 +585,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"029a" and note_count = x"003a") then
+	    elsif (large_count = x"0190" and note_count = x"003a") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -589,7 +595,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"014d" and note_count = x"003c") then
+	    elsif (large_count = x"00c8" and note_count = x"003c") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -601,7 +607,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"029a" and note_count = x"003e") then
+	    elsif (large_count = x"0190" and note_count = x"003e") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -611,7 +617,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"014d" and note_count = x"0040") then
+	    elsif (large_count = x"00c8" and note_count = x"0040") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -621,7 +627,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"03e8" and note_count = x"0042") then
+	    elsif (large_count = x"0258" and note_count = x"0042") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -633,7 +639,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"07d0" and note_count = x"0044") then
+	    elsif (large_count = x"04b0" and note_count = x"0044") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -645,7 +651,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"0a6a" and note_count = x"0046") then
+	    elsif (large_count = x"0640" and note_count = x"0046") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -657,7 +663,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"014d" and note_count = x"0048") then
+	    elsif (large_count = x"00c8" and note_count = x"0048") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -667,7 +673,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"029a" and note_count = x"004a") then
+	    elsif (large_count = x"0190" and note_count = x"004a") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -677,7 +683,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"014d" and note_count = x"004c") then
+	    elsif (large_count = x"00c8" and note_count = x"004c") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -689,7 +695,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"03e8" and note_count = x"004e") then
+	    elsif (large_count = x"0258" and note_count = x"004e") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -699,7 +705,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"03e8" and note_count = x"0050") then
+	    elsif (large_count = x"0258" and note_count = x"0050") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -721,7 +727,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"014d" and note_count = x"0054") then
+	    elsif (large_count = x"00c8" and note_count = x"0054") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -743,7 +749,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"014d" and note_count = x"0058") then
+	    elsif (large_count = x"00c8" and note_count = x"0058") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -765,7 +771,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-	    elsif (large_count = x"014d" and note_count = x"005c") then
+	    elsif (large_count = x"00c8" and note_count = x"005c") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -777,7 +783,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"029a" and note_count = x"005e") then
+            elsif (large_count = x"0190" and note_count = x"005e") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -787,7 +793,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"014d" and note_count = x"0060") then
+            elsif (large_count = x"00c8" and note_count = x"0060") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -797,7 +803,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;       
-            elsif (large_count = x"029a" and note_count = x"0062") then
+            elsif (large_count = x"0190" and note_count = x"0062") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -807,7 +813,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;       
-            elsif (large_count = x"014d" and note_count = x"0064") then
+            elsif (large_count = x"00c8" and note_count = x"0064") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -819,7 +825,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"029a" and note_count = x"0066") then 
+            elsif (large_count = x"0190" and note_count = x"0066") then 
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -829,7 +835,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;                   
-            elsif (large_count = x"014d" and note_count = x"0068") then 
+            elsif (large_count = x"00c8" and note_count = x"0068") then 
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -839,7 +845,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"029a" and note_count = x"006a") then 
+            elsif (large_count = x"0190" and note_count = x"006a") then 
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -849,7 +855,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;                   
-            elsif (large_count = x"014d" and note_count = x"006c") then 
+            elsif (large_count = x"00c8" and note_count = x"006c") then 
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -861,7 +867,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"029a" and note_count = x"006e") then
+            elsif (large_count = x"0190" and note_count = x"006e") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -871,7 +877,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"014d" and note_count = x"0070") then
+            elsif (large_count = x"00c8" and note_count = x"0070") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -881,7 +887,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;       
-            elsif (large_count = x"029a" and note_count = x"0072") then
+            elsif (large_count = x"0190" and note_count = x"0072") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -891,7 +897,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;       
-            elsif (large_count = x"014d" and note_count = x"0074") then
+            elsif (large_count = x"00c8" and note_count = x"0074") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -903,7 +909,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"029a" and note_count = x"0076") then
+            elsif (large_count = x"0190" and note_count = x"0076") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -913,7 +919,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"014d" and note_count = x"0078") then
+            elsif (large_count = x"00c8" and note_count = x"0078") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -923,7 +929,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;       
-            elsif (large_count = x"029a" and note_count = x"007a") then
+            elsif (large_count = x"0190" and note_count = x"007a") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -933,7 +939,7 @@ begin
                large_count <= x"0000";
                small_count <= x"0000";
                note_count <= note_count + 1;       
-            elsif (large_count = x"014d" and note_count = x"007c") then
+            elsif (large_count = x"00c8" and note_count = x"007c") then
                note_next <= "00000"; -- off
                large_count <= x"0000";
                small_count <= x"0000";
@@ -945,7 +951,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"029a" and note_count = x"007e") then
+            elsif (large_count = x"0190" and note_count = x"007e") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -955,7 +961,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;
-            elsif (large_count = x"014d" and note_count = x"0080") then
+            elsif (large_count = x"00c8" and note_count = x"0080") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -965,7 +971,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;       
-            elsif (large_count = x"029a" and note_count = x"0082") then
+            elsif (large_count = x"0190" and note_count = x"0082") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
@@ -975,7 +981,7 @@ begin
                 large_count <= x"0000";
                 small_count <= x"0000";
                 note_count <= note_count + 1;       
-            elsif (large_count = x"014d" and note_count = x"0084") then
+            elsif (large_count = x"00c8" and note_count = x"0084") then
                 note_next <= "00000"; -- off
                 large_count <= x"0000";
                 small_count <= x"0000";
