@@ -247,6 +247,7 @@ begin
                 -- 1000000 clock cycles = 0.01 sec, therefore 40000 clock cycles = 0.0004 sec
                 -- Therefore, if small_count increases every clock cycle, then large_count increases
                 -- every 0.0004 sec
+                -- These counters are defined near the top of this file as 15-bit std logic vectors.
                 if (small_count = x"9c40") then
                     large_count <= large_count + 1;
                     small_count <= x"0000";
